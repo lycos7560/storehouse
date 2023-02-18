@@ -1,6 +1,5 @@
-/*
 
-//stack을 이용하여 Flood fill 구현
+
 #include<iostream>
 #include<stack>
 #define MAX_N 10
@@ -8,7 +7,7 @@
 
 using namespace std;
 
-// 좌표를 표현
+//좌표를 표현
 struct Point {
 
 	int row, col;
@@ -17,9 +16,9 @@ struct Point {
 
 //상하좌우로 움직이기 위한 델타값 정의
 int D[4][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-              //  상       하      좌        우
+              // 상       하      좌        우
 
-// 판의 크기 N 
+//판의 크기 N 
 int N, Board[MAX_N][MAX_N];
 
 void dfs(int r, int c, int color)
@@ -54,13 +53,13 @@ void dfs(int r, int c, int color)
 				continue;
 			}
 
-			// 방문했던 곳이면 스킵
+			//방문했던 곳이면 스킵
 			if (visited[nr][nc])
 			{
 				continue;
 			}
 
-			// 벽을 만났을시 스킵
+			//벽을 만났을시 스킵
 			if (Board[nr][nc] == 1)
 			{
 				continue;
@@ -98,7 +97,7 @@ int main()
 	
 	cout << "\n";
 
-	// 결과를 출력
+	//결과를 출력
 	for (int i = 0; i < N; ++i)
 	{
 		for (int j = 0; j < N; ++j)
@@ -112,15 +111,3 @@ int main()
 	return 0;
 }
 
-
-/*
-입력 
-
-5
-0 0 0 0 0
-0 0 0 1 1
-0 0 0 1 0
-1 1 1 1 0
-0 0 0 0 0
-1 1 3
-*/

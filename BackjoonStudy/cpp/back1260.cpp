@@ -1,4 +1,4 @@
-/*
+
 #include<iostream>
 #include<queue>
 
@@ -20,13 +20,13 @@ void Reset()
 
 void DFS(int v)
 {
-	// 해당 정점 방문으로 변경
+	//해당 정점 방문으로 변경
 	visited[v] = true;
 	cout << v << " ";
 
 	for (int i = 1; i <= N; i++)
 	{
-		// 현재 정점과 연결되어있고 방문되지 않았으면 실행
+		//현재 정점과 연결되어있고 방문되지 않았으면 실행
 		if (map[v][i] == 1 && visited[i] == 0)
 		{
 			DFS(i); // 재귀
@@ -48,7 +48,7 @@ void BFS(int v)
 
 		for (int j = 1; j <= N; j++)
 		{
-			// 현재의 정점과 연결되어 있고 방문되지 않았으면 실행
+			//현재의 정점과 연결되어 있고 방문되지 않았으면 실행
 			if (map[v][j] == 1 && visited[j] == 0)
 			{
 				q.push(j);
@@ -82,4 +82,4 @@ int main()
 
 	return 0;
 }
-*/
+

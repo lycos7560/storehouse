@@ -1,4 +1,4 @@
-/*
+
 #include<iostream>
 #include<cstring>
 
@@ -36,15 +36,11 @@ int main()
 		int u, v;
 		cin >> u >> v;
 		Graph[u][v] = Graph[v][u] = 1;
-		// u -> v 갈 수 있다. 1로 변경
-		// v -> u 갈 수 있다.
+		u -> v 갈 수 있다. 1로 변경
+		v -> u 갈 수 있다.
 	}
 
 	dfs(0);
 	return 0;
 
 }
-
-*/
-
-// https://www.youtube.com/watch?v=M48Po-wTOpU
